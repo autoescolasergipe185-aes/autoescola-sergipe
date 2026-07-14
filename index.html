@@ -114,6 +114,35 @@
             box-shadow: 0 15px 30px rgba(37, 211, 102, 0.3);
         }
 
+        /* --- ESTILO DO BOTÃO VER MAIS AVALIAÇÕES --- */
+.reviews-more {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btn-outline-reviews {
+    background-color: transparent;
+    color: var(--secondary);
+    border: 2px solid var(--secondary);
+    font-size: 1rem;
+    padding: 12px 28px;
+    font-weight: 600;
+}
+
+.btn-outline-reviews i {
+    color: #4285F4; /* Cor clássica do azul do Google */
+}
+
+.btn-outline-reviews:hover {
+    background-color: var(--secondary);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-outline-reviews:hover i {
+    color: var(--primary); /* O G do Google muda de cor suavemente no hover */
+}
+
         /* --- CABEÇALHO --- */
         header {
             background-color: var(--bg-white);
@@ -140,6 +169,13 @@
             display: flex;
             align-items: center;
             gap: 8px;
+        }
+
+        .logo-img {
+            height: 50px;       /* Mantém a altura ideal para não quebrar o menu */
+            width: auto;        /* Mantém a proporção real da imagem */
+            object-fit: contain;
+            border-radius: 4px; /* Deixa as quinas levemente arredondadas, mas ainda quadrada */
         }
 
         .logo i {
@@ -572,9 +608,10 @@
     <!-- 1. CABEÇALHO -->
     <header>
         <div class="container">
-            <a href="#" class="logo">
-                <i class="fa-solid fa-car-rear"></i> Autoescola Sergipe
-            </a>
+    <a href="#" class="logo">
+        <img src="logo.png" alt=" Auto Escola Sergipe" class="logo-img">
+        Auto Escola Sergipe
+    </a>
             <nav>
                 <a href="#">Início</a>
                 <a href="#aprovados">Aprovados</a>
@@ -583,7 +620,7 @@
                 <a href="#diferenciais">Diferenciais</a>
                 <a href="#faq">Dúvidas</a>
             </nav>
-            <a href="https://wa.me/5579999999999?text=Olá!+Quero+saber+mais+sobre+os+valores+da+CNH." target="_blank" class="btn btn-primary">Fale Conosco</a>
+            <a href="https://wa.me/5511969385261?text=Olá!+Quero+saber+mais+sobre+os+valores+da+CNH." target="_blank" class="btn btn-primary">Fale Conosco</a>
         </div>
     </header>
 
@@ -593,7 +630,7 @@
             <div class="hero-content">
                 <h1>Conquiste sua Liberdade: Tire sua CNH na <span>Auto Escola Sergipe</span> com quem mais aprova!</h1>
                 <p>Instrutores pacientes, frota moderna e parcelamento facilitado para você pilotar ou dirigir sem medo.</p>
-                <a href="https://wa.me/5579999999999?text=Olá!+Quero+saber+mais+sobre+os+valores+da+CNH." target="_blank" class="btn btn-whatsapp">
+                <a href="https://wa.me/5511969385261?text=Olá!+Quero+saber+mais+sobre+os+valores+da+CNH." target="_blank" class="btn btn-whatsapp">
                     <i class="fa-brands fa-whatsapp"></i> Quero Começar Minha CNH pelo WhatsApp
                 </a>
             </div>
@@ -651,27 +688,38 @@
                     <div class="review-header">
                         <div class="review-avatar">MA</div>
                         <div class="review-user">
-                            <h4>Marcos Andrade</h4>
+                            <h4>Rose Alves</h4>
                             <div class="stars">
                                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                             </div>
                         </div>
                     </div>
-                    <p>"Excelente autoescola. O atendimento na recepção é super transparente sobre as taxas do Detran, e os carros novos facilitam muito no dia do exame técnico. Nota 10!"</p>
+                    <p>"Ótimo preço
+Autoescola Perfeita: excelente atendimento! O professor Júnior é muito competente e paciente. A atendente Paloma também foi muito atenciosa e prestativa durante todo o processo. Recomendo a Autoescola Perfeita para quem está procurando um serviço de qualidade!</p>
                 </div>
                 <!-- Review 2 -->
                 <div class="review-card">
                     <div class="review-header">
                         <div class="review-avatar">FA</div>
                         <div class="review-user">
-                            <h4>Fernanda Almeida</h4>
+                            <h4>Marcelly Maria</h4>
                             <div class="stars">
                                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                             </div>
                         </div>
                     </div>
-                    <p>"Tinha muito medo de dirigir e o instrutor foi extremamente paciente comigo na baliza. Consegui passar de primeira na prova prática. Recomendo demais!"</p>
+                    <p>"Quero agradecer a toda a equipe da autoescola pelo excelente atendimento e dedicação durante todo o processo da minha habilitação. Desde o início, todos sempre estiveram presentes, oferecendo suporte, esclarecendo dúvidas e dando todo o incentivo necessário.
+
+Também quero fazer um agradecimento especial ao instrutor Júnior, que me auxiliou nas aulas com muita maestria, paciência e profissionalismo. Ele sempre transmitiu confiança, explicou tudo com calma e me ajudou a evoluir a cada aula, tornando o aprendizado muito mais tranquilo.
+
+Graças ao comprometimento de toda a equipe e ao excelente trabalho do Júnior, consegui ser aprovada na prova prática. Recomendo a autoescola de olhos fechados para quem busca um ensino de qualidade e profissionais realmente dedicados. Muito obrigada por fazerem parte dessa conquista!"</p>
                 </div>
+            </div>
+            <!-- ADICIONE ESTE BLOCO ABAIXO -->
+            <div class="reviews-more">
+                <a href="https://www.google.com/search?sca_esv=86af016eff04585c&sxsrf=APpeQnv9ee43EF9sKF9ZAUkRmRls0nitmQ:1783998735634&si=APenkKm7iecQ4G6P-TsbSMFKIQtv3EFIqRAFw-i8uEbk55Z-_4EsZhcWNBtvTlfvrZ6icNZlJwHpktDqz78WhHHXuGlkVViw512Hdk48RrQWcA0P45aAbLB_WGR3UP8yxkNw45TN7yqeOD0jONdnCXzyz0l6LQXyHQ%3D%3D&q=Auto+Escola+Sergipe+Coment%C3%A1rios&sa=X&ved=2ahUKEwiE66qXmdGVAxXqObkGHdzLDI4Q0bkNegQIOxAH&biw=1366&bih=599&dpr=1#" target="_blank" class="btn btn-outline-reviews">
+                    <i class="fa-brands fa-google"></i> Ver mais avaliações no Google
+                </a>
             </div>
         </div>
     </section>
@@ -702,10 +750,10 @@
         </div>
     </section>
 
-    <!-- 6. POR QUE ESCOLHER A AUTOESCOLA SERGIPE -->
+    <!-- 6. POR QUE ESCOLHER A AUTO ESCOLA SERGIPE -->
     <section id="diferenciais" class="section diferenciais">
         <div class="container">
-            <h2 class="section-title">Por que Escolher a <span>Autoescola Sergipe</span>?</h2>
+            <h2 class="section-title">Por que Escolher a <span>Auto Escola Sergipe</span>?</h2>
             <p class="section-subtitle" style="color: #94A3B8;">Estrutura planejada do início ao fim para garantir o seu sucesso.</p>
             
             <div class="diferenciais-grid">
@@ -754,7 +802,7 @@
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">Posso parcelar o valor do processo? <i class="fa-solid fa-chevron-down faq-icon"></i></div>
-                    <div class="faq-answer">Sim! Facilitamos o pagamento através de parcelamento no cartão de crédito em até 12x, boleto bancário estruturado ou condições especiais via Pix.</div>
+                    <div class="faq-answer">Sim! Facilitamos o pagamento através de parcelamento no cartão de crédito em até 3x SEM JUROS!, condições especiais via Pix.</div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">Quanto tempo demora para concluir todo o processo da CNH? <i class="fa-solid fa-chevron-down faq-icon"></i></div>
@@ -771,7 +819,7 @@
             <p class="section-subtitle">Venha nos visitar e conhecer nossa estrutura de atendimento de perto.</p>
         </div>
         <!-- NOTA IMPORTANTE: Para o mapa real, substitua o link de EMBED do iframe abaixo com o código de compartilhamento gerado diretamente dentro do seu Perfil do Google Maps corporativo -->
-        <iframe class="map-wrapper" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.4729160172653!2d-37.0566371!3d-10.9276189!2m3!1f0!2f0!3f0!2m3!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDU1JzM5LjQiUyAzN8KwMDMnMjMuOSJX!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe class="map-wrapper" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.485985811952!2d-46.5182799585215!3d-23.586897607965515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce67812e8f6241%3A0x47c5edd7d71cea4c!2sAuto%20Escola%20Sergipe!5e0!3m2!1spt-BR!2sbr!4v1783996648895!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
 
     <!-- RODAPÉ -->
@@ -779,9 +827,9 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <h2>Autoescola Sergipe</h2>
+                    <h2>Auto Escola Sergipe</h2>
                     <p>Sua liberdade começa aqui sobre rodas com segurança e alta aprovação.</p>
-                    <span class="detran-badge">AUTOESCOLA CREDENCIADA PELO DETRAN</span>
+                    <span class="detran-badge">AUTO ESCOLA CREDENCIADA PELO DETRAN</span>
                 </div>
                 <div class="footer-box">
                     <h4>Links Rápidos</h4>
@@ -795,21 +843,21 @@
                 <div class="footer-box">
                     <h4>Contato e Endereço</h4>
                     <ul class="contact-info">
-                        <li><i class="fa-solid fa-location-dot"></i> Centro, Aracaju - SE, CEP: 49000-000</li>
-                        <li><i class="fa-solid fa-phone"></i> (79) 3333-4444</li>
-                        <li><i class="fa-solid fa-envelope"></i> contato@autoescolasergipe.com.br</li>
-                        <li><i class="fa-solid fa-building"></i> CNPJ: 00.000.000/0001-00</li>
+                        <li><i class="fa-solid fa-location-dot"></i> Av. da Barreira Grande, 2450 - Vila Bancaria, São Paulo - SP, CEP: 03916-000</li>
+                        <li><i class="fa-solid fa-phone"></i> (11) 2721-3717 | (11) 96938-5261</li>
+                        <li><i class="fa-solid fa-envelope"></i> autoescolasergipe185@gmail.com.br</li>
+                        <li><i class="fa-solid fa-building"></i> CNPJ: 47.734.041/0001-75</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Autoescola Sergipe. Todos os direitos reservados. Desenvolvido para Alta Conversão Comercial.</p>
+                <p>&copy; 2026 Auto Escola Sergipe. Todos os direitos reservados. Desenvolvido para Alta Conversão Comercial.</p>
             </div>
         </div>
     </footer>
 
     <!-- ÍCONE WHATSAPP FLUTUANTE -->
-    <a href="https://wa.me/5579999999999?text=Olá!+Quero+saber+mais+sobre+os+valores+da+CNH." class="whatsapp-float" target="_blank" title="Chamar no WhatsApp">
+    <a href="https://wa.me/5511969385261?text=Olá!+Quero+saber+mais+sobre+os+valores+da+CNH." class="whatsapp-float" target="_blank" title="Chamar no WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
