@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BKB3RV17RP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-BKB3RV17RP');
+    </script>
+    
+    <title>Obrigado! - Auto Escola Sergipe</title>
+    <!-- FontAwesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #FFD700;
+            --secondary: #1E293B;
+            --text-dark: #0F172A;
+            --text-light: #64748B;
+            --bg-light: #F8FAFC;
+            --bg-white: #FFFFFF;
+            --whatsapp: #25D366;
+            --whatsapp-hover: #20BA5A;
+            --transition: all 0.3s ease;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --radius: 16px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .thankyou-card {
+            background-color: var(--bg-white);
+            max-width: 500px;
+            width: 100%;
+            padding: 48px 32px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            border: 1px solid #E2E8F0;
+        }
+
+        .icon-check {
+            width: 70px;
+            height: 70px;
+            background-color: #DCFCE7;
+            color: #15803D;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            margin: 0 auto 20px auto;
+        }
+
+        .thankyou-card h1 {
+            font-size: 1.8rem;
+            color: var(--secondary);
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .thankyou-card p {
+            color: var(--text-light);
+            font-size: 1rem;
+            margin-bottom: 32px;
+            line-height: 1.5;
+        }
+
+        .btn-whatsapp {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background-color: var(--whatsapp);
+            color: white;
+            font-size: 1.1rem;
+            padding: 18px 24px;
+            border-radius: var(--radius);
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.25);
+        }
+
+        .btn-whatsapp:hover {
+            background-color: var(--whatsapp-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 25px rgba(37, 211, 102, 0.35);
+        }
+
+        .btn-back {
+            display: inline-block;
+            margin-top: 24px;
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 0.88rem;
+            transition: var(--transition);
+        }
+
+        .btn-back:hover {
+            color: var(--secondary);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="thankyou-card">
+        <div class="icon-check">
+            <i class="fa-solid fa-check"></i>
+        </div>
+        
+        <h1>Falta só um passo!</h1>
+        <p>Sua dúvida ou orçamento será atendido diretamente pela nossa equipe. Clique no botão abaixo para abrir a conversa no WhatsApp:</p>
+
+        <a href="https://wa.me/5511969385261?text=Olá!+Quero+saber+mais+sobre+os+valores+da+CNH." target="_blank" class="btn-whatsapp">
+            <i class="fa-brands fa-whatsapp"></i> Falar pelo WhatsApp Agora
+        </a>
+
+        <a href="index.html" class="btn-back">
+            <i class="fa-solid fa-arrow-left"></i> Voltar para o site principal
+        </a>
+    </div>
+
+</body>
+</html>
