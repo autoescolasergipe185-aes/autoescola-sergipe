@@ -15,7 +15,7 @@
     </script>
     
     <title>Auto Escola Sergipe - Conquiste sua CNH</title>
-        <!-- FontAwesome para ícones -->
+    <!-- FontAwesome para ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -92,18 +92,20 @@
             align-items: center;
             justify-content: center;
             gap: 10px;
-            padding: 14px 28px;
+            padding: 12px 20px;
             border-radius: var(--radius);
             font-weight: 600;
             text-decoration: none;
             transition: var(--transition);
             cursor: pointer;
             border: none;
+            white-space: nowrap;
         }
 
         .btn-primary {
             background-color: var(--primary);
             color: var(--secondary);
+            font-size: 0.95rem;
         }
 
         .btn-primary:hover {
@@ -126,42 +128,42 @@
         }
 
         /* --- ESTILO DO BOTÃO VER MAIS AVALIAÇÕES --- */
-.reviews-more {
-    text-align: center;
-    margin-top: 40px;
-}
+        .reviews-more {
+            text-align: center;
+            margin-top: 40px;
+        }
 
-.btn-outline-reviews {
-    background-color: transparent;
-    color: var(--secondary);
-    border: 2px solid var(--secondary);
-    font-size: 1rem;
-    padding: 12px 28px;
-    font-weight: 600;
-}
+        .btn-outline-reviews {
+            background-color: transparent;
+            color: var(--secondary);
+            border: 2px solid var(--secondary);
+            font-size: 1rem;
+            padding: 12px 28px;
+            font-weight: 600;
+        }
 
-.btn-outline-reviews i {
-    color: #4285F4; /* Cor clássica do azul do Google */
-}
+        .btn-outline-reviews i {
+            color: #4285F4; /* Cor clássica do azul do Google */
+        }
 
-.btn-outline-reviews:hover {
-    background-color: var(--secondary);
-    color: white;
-    transform: translateY(-2px);
-}
+        .btn-outline-reviews:hover {
+            background-color: var(--secondary);
+            color: white;
+            transform: translateY(-2px);
+        }
 
-.btn-outline-reviews:hover i {
-    color: var(--primary); /* O G do Google muda de cor suavemente no hover */
-}
+        .btn-outline-reviews:hover i {
+            color: var(--primary); /* O G do Google muda de cor suavemente no hover */
+        }
 
-        /* --- CABEÇALHO --- */
+        /* --- CABEÇALHO (CORRIGIDO PARA DESKTOP E MOBILE) --- */
         header {
             background-color: var(--bg-white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
             position: sticky;
             top: 0;
             z-index: 1000;
-            height: 80px;
+            min-height: 80px;
             display: flex;
             align-items: center;
         }
@@ -170,44 +172,46 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 20px;
+            width: 100%;
         }
 
         .logo {
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             font-weight: 800;
             color: var(--secondary);
             text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
+            flex-shrink: 0;
         }
 
         .logo-img {
-            height: 50px;       /* Mantém a altura ideal para não quebrar o menu */
-            width: auto;        /* Mantém a proporção real da imagem */
+            height: 48px;
+            width: auto;
             object-fit: contain;
-            border-radius: 4px; /* Deixa as quinas levemente arredondadas, mas ainda quadrada */
-        }
-
-        .logo i {
-            color: var(--primary);
+            border-radius: 4px;
         }
 
         nav {
             display: flex;
             align-items: center;
-            gap: 32px;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
         nav a {
             text-decoration: none;
             color: var(--secondary);
             font-weight: 500;
+            font-size: 0.95rem;
             transition: var(--transition);
+            white-space: nowrap;
         }
 
         nav a:hover {
-            color: var(--primary-hover);
+            color: #B45309;
         }
 
         /* --- SEÇÃO HERO --- */
@@ -229,8 +233,7 @@
             background: url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=1200&q=80') no-repeat center center;
             background-size: cover;
             opacity: 0.15;
-            skew-x: -10deg;
-            transform: translateX(10%);
+            transform: skewX(-10deg) translateX(10%);
         }
 
         .hero-content {
@@ -276,12 +279,10 @@
         }
 
         .aprovado-img {
-            width: 95%;
-            height: 500px;
+            width: 100%;
+            height: 380px;
             object-fit: cover;
             background-color: #E2E8F0;
-            align-items: center;
-            justify-content: center;
         }
 
         .aprovado-info {
@@ -607,10 +608,18 @@
             transform: scale(1.1);
         }
 
-        /* --- RESPONSIVIDADE --- */
-        @media (max-width: 768px) {
+        /* --- RESPONSIVIDADE (MOBILE AJUSTADO) --- */
+        @media (max-width: 992px) {
             header .btn { display: none; }
-            nav { display: none; } /* Para produção, ideal adicionar menu hambúrguer */
+            nav { gap: 12px; }
+            nav a { font-size: 0.85rem; }
+        }
+
+        @media (max-width: 768px) {
+            header .container {
+                justify-content: center;
+            }
+            nav { display: none; }
             .hero h1 { font-size: 2.2rem; }
             .section-title { font-size: 1.8rem; }
         }
@@ -621,10 +630,10 @@
     <!-- 1. CABEÇALHO -->
     <header>
         <div class="container">
-    <a href="#" class="logo">
-        <img src="logo.png" alt=" Auto Escola Sergipe" class="logo-img">
-        Auto Escola Sergipe
-    </a>
+            <a href="#" class="logo">
+                <img src="logo.png" alt="Auto Escola Sergipe" class="logo-img">
+                Auto Escola Sergipe
+            </a>
             <nav>
                 <a href="#">Início</a>
                 <a href="#aprovados">Aprovados</a>
@@ -659,7 +668,6 @@
             <div class="aprovados-grid">
                 <!-- Card Aluno 1 -->
                 <div class="aprovado-card">
-                    <!-- Nota: Substitua a URL da imagem abaixo pela foto real do seu aluno -->
                     <img src="amanda carvalho.jpeg" alt="Aluno Aprovado" class="aprovado-img">
                     <div class="aprovado-info">
                         <span class="badge-status">APROVADO!!</span>
@@ -709,8 +717,7 @@ Perfeitos!!! Obrigada por tudo!"</p>
                             </div>
                         </div>
                     </div>
-                    <p>"Ótimo preço
-Autoescola Perfeita: excelente atendimento! O professor Júnior é muito competente e paciente. A atendente Paloma também foi muito atenciosa e prestativa durante todo o processo. Recomendo a Autoescola Perfeita para quem está procurando um serviço de qualidade!</p>
+                    <p>"Ótimo preço. Autoescola Perfeita: excelente atendimento! O professor Júnior é muito competente e paciente. A atendente Paloma também foi muito atenciosa e prestativa durante todo o processo. Recomendo para quem está procurando um serviço de qualidade!"</p>
                 </div>
                 <!-- Review 2 -->
                 <div class="review-card">
@@ -723,16 +730,11 @@ Autoescola Perfeita: excelente atendimento! O professor Júnior é muito compete
                             </div>
                         </div>
                     </div>
-                    <p>"Quero agradecer a toda a equipe da autoescola pelo excelente atendimento e dedicação durante todo o processo da minha habilitação. Desde o início, todos sempre estiveram presentes, oferecendo suporte, esclarecendo dúvidas e dando todo o incentivo necessário.
-
-Também quero fazer um agradecimento especial ao instrutor Júnior, que me auxiliou nas aulas com muita maestria, paciência e profissionalismo. Ele sempre transmitiu confiança, explicou tudo com calma e me ajudou a evoluir a cada aula, tornando o aprendizado muito mais tranquilo.
-
-Graças ao comprometimento de toda a equipe e ao excelente trabalho do Júnior, consegui ser aprovada na prova prática. Recomendo a autoescola de olhos fechados para quem busca um ensino de qualidade e profissionais realmente dedicados. Muito obrigada por fazerem parte dessa conquista!"</p>
+                    <p>"Quero agradecer a toda a equipe da autoescola pelo excelente atendimento e dedicação durante todo o processo da minha habilitação. Desde o início, todos sempre estiveram presentes, oferecendo suporte e esclarecendo dúvidas."</p>
                 </div>
             </div>
-            <!-- ADICIONE ESTE BLOCO ABAIXO -->
             <div class="reviews-more">
-                <a href="https://www.google.com/search?sca_esv=86af016eff04585c&sxsrf=APpeQnv9ee43EF9sKF9ZAUkRmRls0nitmQ:1783998735634&si=APenkKm7iecQ4G6P-TsbSMFKIQtv3EFIqRAFw-i8uEbk55Z-_4EsZhcWNBtvTlfvrZ6icNZlJwHpktDqz78WhHHXuGlkVViw512Hdk48RrQWcA0P45aAbLB_WGR3UP8yxkNw45TN7yqeOD0jONdnCXzyz0l6LQXyHQ%3D%3D&q=Auto+Escola+Sergipe+Coment%C3%A1rios&sa=X&ved=2ahUKEwiE66qXmdGVAxXqObkGHdzLDI4Q0bkNegQIOxAH&biw=1366&bih=599&dpr=1#" target="_blank" class="btn btn-outline-reviews">
+                <a href="https://www.google.com/search?q=Auto+Escola+Sergipe+Coment%C3%A1rios" target="_blank" class="btn btn-outline-reviews">
                     <i class="fa-brands fa-google"></i> Ver mais avaliações no Google
                 </a>
             </div>
@@ -833,7 +835,6 @@ Graças ao comprometimento de toda a equipe e ao excelente trabalho do Júnior, 
             <h2 class="section-title">Nossa <span>Localização</span></h2>
             <p class="section-subtitle">Venha nos visitar e conhecer nossa estrutura de atendimento de perto.</p>
         </div>
-        <!-- NOTA IMPORTANTE: Para o mapa real, substitua o link de EMBED do iframe abaixo com o código de compartilhamento gerado diretamente dentro do seu Perfil do Google Maps corporativo -->
         <iframe class="map-wrapper" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.485985811952!2d-46.5182799585215!3d-23.586897607965515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce67812e8f6241%3A0x47c5edd7d71cea4c!2sAuto%20Escola%20Sergipe!5e0!3m2!1spt-BR!2sbr!4v1783996648895!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
 
@@ -884,14 +885,12 @@ Graças ao comprometimento de toda a equipe e ao excelente trabalho do Júnior, 
             question.addEventListener('click', () => {
                 const item = question.parentElement;
                 
-                // Fecha outros itens abertos (Opcional)
                 document.querySelectorAll('.faq-item').forEach(otherItem => {
                     if (otherItem !== item) {
                         otherItem.classList.remove('active');
                     }
                 });
 
-                // Alterna o estado do item atual
                 item.classList.toggle('active');
             });
         });
